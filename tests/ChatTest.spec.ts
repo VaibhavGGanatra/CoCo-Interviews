@@ -1,0 +1,31 @@
+import { test } from '../fixture/pageFixture'
+require('dotenv').config()
+
+test.describe('Basic test for login', () => {
+
+  test.beforeEach(async ({ basePage }) => {
+    await basePage.loginToApp()
+  })
+
+  // prettier-ignore
+  test('Click on Search an entire database and select a database', { tag: ['@aiSkills', '@regression'] }, async ({ basePage }) => {
+    basePage.page.locator('.chat-input-upload-button:not(.disabled)')
+
+    // Click on Search and entire database
+
+    // Search for a database
+
+    // Select the radio button for db and click on select database button
+
+  })
+
+  // prettier-ignore
+  test('Rename chat', { tag: ['@aiSkills', '@regression'] }, async ({ basePage }) => {
+
+    // Click on 3 dots for first chat
+
+    // Rename chat and save
+    
+  })
+
+})
