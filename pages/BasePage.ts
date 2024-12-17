@@ -44,13 +44,13 @@ export default class BasePage {
         await this.page.goto(url)
         await expect(this.base.usernameInput).toBeVisible()
         await expect(this.base.passwordInput).toBeVisible()
-        await this.base.usernameInput.fill("abc@gmail.com")
+        await this.base.usernameInput.fill("qa.emails@thoughttrace.dev")
         await expect(this.base.passwordInput).toBeEditable()
         await this.base.passwordInput.fill("password1234")
         this.base.signInButton.click()
         expect(this.base.signInButton).not.toBeVisible()
         await this.page.waitForLoadState('domcontentloaded')
-        await this.validateLoggedInUser("userText")
+        await this.validateLoggedInUser("QT")
         await this.closeCookieBannerOrWelcomeToCoCounselIfVisible()
     }
 
