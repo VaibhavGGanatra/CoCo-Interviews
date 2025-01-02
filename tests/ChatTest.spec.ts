@@ -9,7 +9,7 @@ test.describe('Basic test for login', () => {
 
   // prettier-ignore
   test('Click on Search an entire database and select a database', { tag: ['@aiSkills', '@regression'] }, async ({ basePage }) => {
-    basePage.page.locator('.chat-input-upload-button:not(.disabled)')
+    await basePage.page.locator('.chat-input-upload-button:not(.disabled)').click()
 
     // Click on Search and entire database
 
