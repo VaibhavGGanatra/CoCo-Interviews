@@ -28,4 +28,14 @@ test.describe('Basic test for login', () => {
     
   })
 
+  // prettier-ignore
+  test('Start a new chat', { tag: ['@aiSkills', '@regression'] }, async ({ basePage }) => {
+
+    // Type below message in chat input
+    const prompt = "What can you do when upload a file"
+
+    // Validate the response received from the bot
+    
+  })
+
 })
