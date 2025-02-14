@@ -45,7 +45,7 @@ export default class BasePage {
         await this.page.goto(url)
         await expect(this.base.usernameInput).toBeVisible()
         await expect(this.base.passwordInput).toBeVisible()
-        await this.base.usernameInput.fill("qa.emails@thoughttrace.dev")
+        await this.base.usernameInput.fill("qafffffemails@thoughttrace.dev")
         await expect(this.base.passwordInput).toBeEditable()
         await this.base.passwordInput.fill("Test@123")
         this.base.signInButton.click()
