@@ -47,7 +47,7 @@ export default class BasePage {
         await expect(this.base.passwordInput).toBeVisible()
         await this.base.usernameInput.fill("qa.emails@thoughttrace.dev")
         await expect(this.base.passwordInput).toBeEditable()
-        await this.base.passwordInput.fill("CoCounselRocks@2024")
+        await this.base.passwordInput.fill("Test@123")
         this.base.signInButton.click()
         expect(this.base.signInButton).not.toBeVisible()
         await this.page.waitForLoadState('domcontentloaded')
