@@ -1,4 +1,4 @@
-import { test } from '../fixture/pageFixture'
+import { expect, test } from '../fixture/pageFixture'
 require('dotenv').config()
 
 test.describe('Basic test for login', () => {
@@ -9,13 +9,15 @@ test.describe('Basic test for login', () => {
 
   // prettier-ignore
   test('Click on Search an entire database and select a database', { tag: ['@aiSkills', '@regression'] }, async ({ basePage }) => {
+    await expect(await basePage.page.locator('.chat-input-upload-button:not(.disabled)')).toBeVisible()
     await basePage.page.locator('.chat-input-upload-button:not(.disabled)').click()
 
-    // Click on Search and entire database
+    // Click on Search and entire database and validate user displayed with dialog
+    
 
-    // Search for a database
+    // Search for a database and validate the searched database is displayed
 
-    // Select the radio button for db and click on select database button
+    // Select the radio button for db and click on select database button and validate selected database is staged
 
   })
 

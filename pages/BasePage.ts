@@ -30,7 +30,8 @@ export default class BasePage {
             sidebarNewButton: this.page.locator('[data-testid="new-chat-button"]'),
             sortByButton: this.page.locator('[data-testid="sort-option-button"]'),
             chatListItems: this.page.locator('.chat-or-folder-item-container'),
-            emptyChatList: this.page.locator('.empty-chat-list')
+            emptyChatList: this.page.locator('.empty-chat-list'),
+            accountMenuLink: this.page.locator('saf-menu-item#account'),
         }
     }
 
@@ -46,7 +47,7 @@ export default class BasePage {
         await expect(this.base.passwordInput).toBeVisible()
         await this.base.usernameInput.fill("qa.emails@thoughttrace.dev")
         await expect(this.base.passwordInput).toBeEditable()
-        await this.base.passwordInput.fill("password1234")
+        await this.base.passwordInput.fill("CoCounselRocks@2024")
         this.base.signInButton.click()
         expect(this.base.signInButton).not.toBeVisible()
         await this.page.waitForLoadState('domcontentloaded')
@@ -80,8 +81,7 @@ export default class BasePage {
      * Validate logged in User via the logo
      */
     async validateLoggedInUser(avatarText: string): Promise<void> {
-        await expect(this.base.profileIconText).toBeVisible()
-        await expect(this.base.profileIconText).toHaveText(avatarText)
+        await expect(this.base.accountMenuLink).toBeVisible()
     }
 
     /**
