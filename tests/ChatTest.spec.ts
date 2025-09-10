@@ -9,9 +9,8 @@ test.describe('Basic test for login', () => {
 
   // prettier-ignore
   test('Click on Search an entire database and select a database', { tag: ['@aiSkills', '@regression'] }, async ({ basePage }) => {
-    await expect(await basePage.page.locator('.chat-input-upload-button:not(.disabled)')).toBeVisible()
-    await basePage.page.locator('.chat-input-upload-button:not(.disabled)').click()
-
+    await expect(await basePage.page.locator('#hermes-file-upload-button:not([disabled])')).toBeVisible()
+    await basePage.page.locator('#hermes-file-upload-button:not([disabled])').click({delay: 2000})
     // Click on Search and entire database and validate user displayed with dialog
     
 
