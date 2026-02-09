@@ -19,7 +19,8 @@ export default defineConfig({
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
         trace: 'off',
-        screenshot: 'only-on-failure'
+        screenshot: 'only-on-failure',
+        actionTimeout: 120 * 1000
     },
     timeout: 300 * 1000,
     expect: {
