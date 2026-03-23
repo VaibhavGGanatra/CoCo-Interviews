@@ -9,8 +9,7 @@ test.describe('Basic test for login', () => {
 
   // prettier-ignore
   test('Click on Search an entire database and select a database', { tag: ['@aiSkills', '@regression'] }, async ({ basePage }) => {
-    await expect(await basePage.page.locator('#hermes-file-upload-button:not([disabled]), app-file-upload-button:not(#hidden-files-mfe-file-upload-button) .chat-input-upload-button:not(.disabled)')).toBeVisible()
-    await basePage.page.locator('#hermes-file-upload-button:not([disabled]), app-file-upload-button:not(#hidden-files-mfe-file-upload-button) .chat-input-upload-button:not(.disabled)').click({delay: 2000})
+    await expect(basePage.page.locator('[data-testid="file-upload-button"]:not([disabled])')).toBeVisible()
     // Click on Search and entire database and validate user displayed with dialog
     
 
