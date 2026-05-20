@@ -57,8 +57,8 @@ export default class BasePage {
      */
     async loginToApp(): Promise<any> {
         const url = 'https://cocounsel.thomsonreuters.com/work/new-chat'
-        const username = "CoCounsel.User21@tr.com"
-        const password = "CoCounselRocks@2025"
+        const username = "automationuser@thoughttrace.dev"
+        const password = "updatePassword"
         
         await this.page.goto(url)
         
